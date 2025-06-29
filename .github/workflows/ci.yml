@@ -33,4 +33,5 @@ jobs:
 
       - name: Run staticcheck
         run: staticcheck ./...
-
+        env:
+          PATH: ${{ env.HOME }}/go/bin:${{ env.PATH }}
