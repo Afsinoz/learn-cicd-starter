@@ -32,6 +32,4 @@ jobs:
         run: go install honnef.co/go/tools/cmd/staticcheck@latest
 
       - name: Run staticcheck
-        run: staticcheck ./...
-        env:
-          PATH: ${{ env.HOME }}/go/bin:${{ env.PATH }}
+        run: $HOME/go/bin/staticcheck ./...
