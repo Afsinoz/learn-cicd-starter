@@ -36,11 +36,14 @@ jobs:
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
 
+        
       - name: 'Use gcloud CLI'
         run: 'gcloud info'
 
+
       - name: 'Submit to google cloud'
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-464710/notely-ar-repo/notely-app:latest .
+
 
       - name: Migrate goose
         run: ./scripts/migrateup.sh
